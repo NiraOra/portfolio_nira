@@ -6,21 +6,25 @@ import Experience from "../components/portfolio/Experience";
 import Projects from "../components/portfolio/Projects";
 import Contact from "../components/portfolio/Contact";
 import Footer from "../components/portfolio/Footer";
+import ParticlesBackground from "../components/portfolio/ParticlesBackground";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background relative">
-      <Navigation />
-      <main>
-        <Hero />
-        <About />
-        <Publications />
-        <Experience />
-        <Projects />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <>
+      <ParticlesBackground />
+      <div className="min-h-screen relative z-10">
+        <Navigation />
+        <main>
+          <Hero />
+          <About />
+          <Publications />
+          <Experience />
+          <Projects />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 };
 
