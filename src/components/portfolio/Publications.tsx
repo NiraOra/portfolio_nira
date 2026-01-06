@@ -7,7 +7,7 @@ const publications = [
     title: "How Effectively Can Large Language Models Connect SNP Variants and ECG Phenotypes for Cardiovascular Risk Prediction?",
     authors: "Niranjana Arun Menon, Iqra Farooq, Yulong Li, Sara Ahmed, Yutong Xie, Muhammad Awais, Imran Razzak",
     venue: "IEEE BIBM 2025",
-    status: "Accepted (to appear)",
+    status: "Accepted",
     preprint: "http://arxiv.org/abs/2508.07127",
     tags: ["Longitudinal Analysis", "Machine Learning", "Biological Age", "Feature Engineering", "SHAP"],
   },
@@ -72,7 +72,11 @@ const Publications = () => {
               <motion.article
                 key={pub.title}
                 variants={itemVariants}
-                className="card-elegant group"
+                className={`card-elegant group ${
+                  pub.status === "Accepted" 
+                    ? "bg-primary/5 border border-primary/20 ring-1 ring-primary/10" 
+                    : ""
+                }`}
               >
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1 space-y-3">
@@ -80,7 +84,15 @@ const Publications = () => {
                       <span className="text-xs font-medium text-primary uppercase tracking-wider">
                         {pub.venue}
                       </span>
-                      <span className="text-xs text-muted-foreground">
+                      <span className={`text-xs ${
+                        pub.status === "Accepted" 
+                          ? "text-amber-600 font-medium" 
+                          : pub.status === "Submitted"
+                          ? "text-blue-600 font-medium"
+                          : pub.status === "In Preparation"
+                          ? "text-slate-500 font-medium"
+                          : "text-muted-foreground"
+                      }`}>
                         • {pub.status}
                       </span>
                     </div>

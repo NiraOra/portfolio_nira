@@ -39,13 +39,7 @@ const Contact = () => {
           <div className="space-y-4 text-center">
             <p className="text-small uppercase tracking-widest">Connect With Me</p>
             <div className="divider mx-auto" />
-            <p className="text-body text-muted-foreground max-w-md mx-auto">
-              Open to research collaborations, AI projects, and early-career opportunities
-              across machine learning and applied AI.
-            </p>
-          </div>
-
-          <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-8">
+            <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-8">
             {links.map((link, index) => (
               <motion.a
                 key={link.label}
@@ -70,6 +64,7 @@ const Contact = () => {
                 </div>
               </motion.a>
             ))}
+          </div>
           </div>
         </motion.div>
       </div>
