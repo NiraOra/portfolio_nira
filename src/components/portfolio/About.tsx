@@ -1,11 +1,15 @@
 import { motion } from "framer-motion";
 import { useScrollReveal } from "../../hooks/use-scroll-reveal";
-import { FileText } from "lucide-react";
+import { FileText, Eye } from "lucide-react";
+import { useState } from "react";
+import ThesisViewer from "./ThesisViewer";
 
 const About = () => {
   const { ref, controls, staggerVariants, itemVariants } = useScrollReveal({
     margin: "-80px"
   });
+  
+  const [isThesisViewerOpen, setIsThesisViewerOpen] = useState(false);
 
   return (
     <section id="about" className="section-padding bg-card" ref={ref}>
@@ -37,17 +41,26 @@ const About = () => {
                 diagnosis through NLP methodologies including knowledge graphs, neural 
                 networks, and Chain of Thought learning.
               </p>
-              <div className="pt-3">
-                <a
-                  href="/pdfs/Niranjana_Arun_Menon_Thesis.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
-                >
-                  <FileText className="w-4 h-4" />
-                  View Thesis (PDF)
-                </a>
-                <p className="text-xs text-muted-foreground mt-1">
+              <div className="pt-3 flex flex-col gap-2">
+                <div className="flex gap-3">
+                  <a
+                    href="/pdfs/Niranjana_Arun_Menon_Thesis.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                  >
+                    <FileText className="w-4 h-4" />
+                    View Thesis (PDF)
+                  </a>
+                  <button
+                    onClick={() => setIsThesisViewerOpen(true)}
+                    className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    <Eye className="w-4 h-4" />
+                    Interactive Viewer
+                  </button>
+                </div>
+                <p className="text-xs text-muted-foreground">
                   Thesis submitted as part of Honours degree requirements
                 </p>
               </div>
@@ -90,6 +103,12 @@ const About = () => {
           </motion.div>
         </motion.div>
       </div>
+      
+      <ThesisViewer
+        pdfUrl="/pdfs/Niranjana_Arun_Menon_Thesis.pdf"
+        isOpen={isThesisViewerOpen}
+        onClose={() => setIsThesisViewerOpen(false)}
+      />
     </section>
   );
 };
