@@ -29,15 +29,15 @@ const About = () => {
           <motion.div variants={itemVariants} className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="space-y-2">
-                <h3 className="font-serif text-xl font-medium">
+                <h3 className="font-serif text-xl font-bold">
                   Bachelor of Computer Science (Honours)
                 </h3>
                 <p className="text-sm text-primary">UNSW Sydney • QS Rank #19</p>
-                <p className="text-small">February 2025 – December 2025</p>
+                <p className="text-small">February 2025 - December 2025</p>
               </div>
               <p className="text-body text-muted-foreground">
-                Specializing in Artificial Intelligence with a thesis on Few Labels 
-                Classification in Text — exploring ML models for cardiogenomic disease 
+                Specialized in Artificial Intelligence with a thesis on Few Labels 
+                Classification in Text which explores ML models for cardiogenomic disease 
                 diagnosis through NLP methodologies including knowledge graphs, neural 
                 networks, and Chain of Thought learning.
               </p>
@@ -61,7 +61,7 @@ const About = () => {
                   </button>
                 </div>
                 <p className="text-xs text-muted-foreground">
-                  Thesis submitted as part of Honours degree requirements
+                  This thesis was submitted as part of the Honours degree requirements. 
                 </p>
               </div>
               <p className="text-sm">
@@ -71,11 +71,11 @@ const About = () => {
 
             <div className="space-y-6">
               <div className="space-y-2">
-                <h3 className="font-serif text-xl font-medium">
+                <h3 className="font-serif text-xl font-bold">
                   Bachelor of Computer Science (AI)
                 </h3>
                 <p className="text-sm text-primary">UNSW Sydney • QS Rank #19</p>
-                <p className="text-small">February 2022 – December 2024</p>
+                <p className="text-small">February 2022 - December 2024</p>
               </div>
               <p className="text-body text-muted-foreground">
                 Gained comprehensive exposure to Python, R, Java, JavaScript & TypeScript 
@@ -89,11 +89,12 @@ const About = () => {
             variants={itemVariants}
             className="pt-8 border-t border-border"
           >
-            <h3 className="font-serif text-lg font-medium mb-4">Technical Skills</h3>
+            <h3 className="font-serif text-lg font-medium mb-4">Technical Skills Gained</h3>
             <div className="flex flex-wrap gap-2">
               {[
                 "Python", "TensorFlow", "R", "SQL", "Java", "TypeScript", 
-                "JavaScript", "Machine Learning", "NLP", "Azure", "GitHub"
+                "JavaScript", "Machine Learning", "NLP", "Azure", "GitHub",
+                "AWS", "Rust"
               ].map((skill) => (
                 <span key={skill} className="tag">
                   {skill}
