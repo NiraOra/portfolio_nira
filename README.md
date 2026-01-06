@@ -2,4 +2,4 @@
 
 WIP DO NOT ENGAGE
 
-oks
+Devved with React (Typescript) and Tailwind CSS
