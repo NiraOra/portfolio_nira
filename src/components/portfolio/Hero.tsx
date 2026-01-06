@@ -30,7 +30,7 @@ const Hero = () => {
             className="max-w-xl space-y-6"
           >
             <p className="text-body text-muted-foreground">
-              Hi, I'm Niranjana! I'm a recent UNSW graduate and AI/ML enthusiast with experience in NLP and deep learning, 
+              Hi, I'm Niranjana! I am a recent UNSW graduate and AI/ML enthusiast with experience in NLP and deep learning. I am 
               interested in building scalable, ethical, and impactful machine learning systems across diverse real-world domains.
             </p>
             
