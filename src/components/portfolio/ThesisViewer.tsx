@@ -26,7 +26,6 @@ const ThesisViewer: React.FC<ThesisViewerProps> = ({ pdfUrl, isOpen, onClose }) 
 
   const handleChapterClick = (page: number) => {
     setCurrentPage(page);
-    // Navigate to specific page in PDF
     const pdfFrame = document.getElementById('thesis-pdf') as HTMLIFrameElement;
     if (pdfFrame) {
       pdfFrame.src = `${pdfUrl}#page=${page}`;
@@ -54,7 +53,6 @@ const ThesisViewer: React.FC<ThesisViewerProps> = ({ pdfUrl, isOpen, onClose }) 
         </div>
 
         <div className="grid lg:grid-cols-4 gap-6 h-[calc(100vh-120px)]">
-          {/* Chapter Navigation */}
           <div className="lg:col-span-1 bg-card rounded-xl p-6 overflow-y-auto">
             <h3 className="font-serif text-lg font-medium mb-4 flex items-center gap-2">
               <BookOpen className="w-5 h-5" />
@@ -77,7 +75,6 @@ const ThesisViewer: React.FC<ThesisViewerProps> = ({ pdfUrl, isOpen, onClose }) 
             </nav>
           </div>
 
-          {/* PDF Viewer */}
           <div className="lg:col-span-3 bg-card rounded-xl overflow-hidden">
             <iframe
               id="thesis-pdf"
