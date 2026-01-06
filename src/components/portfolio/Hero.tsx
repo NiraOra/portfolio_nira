@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
+import ParticlesBackground from "../ParticlesBackground";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex flex-col justify-center relative">
-      <div className="container-narrow">
+    <section className="min-h-screen flex flex-col justify-center relative overflow-hidden">
+      <ParticlesBackground />
+      <div className="container-narrow relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
