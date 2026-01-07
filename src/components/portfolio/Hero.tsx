@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { ArrowDown, User } from "lucide-react";
+import { ArrowDown } from "lucide-react";
+import profilePhoto from "../../assets/profile.jpg";
 
 const Hero = () => {
   return (
@@ -20,12 +21,11 @@ const Hero = () => {
           >
             <div className="relative w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 mx-auto lg:mx-0">
               <div className="w-full h-full rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center border-4 border-primary/10 shadow-lg overflow-hidden">
-                <User className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 text-primary/40" />
-                {/* <img 
-                  src="/path/to/your-photo.jpg" 
+                <img 
+                  src={profilePhoto} 
                   alt="Niranjana Arun Menon"
                   className="w-full h-full object-cover"
-                /> */}
+                />
               </div>
             </div>
           </motion.div>
