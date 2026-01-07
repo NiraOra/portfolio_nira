@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import particlesScript from "../../assets/particles.min.js?url";
+import particlesConfig from "../../assets/particles.json?url";
 
 declare global {
   interface Window {
@@ -10,10 +12,10 @@ declare global {
 const ParticlesBackground = () => {
   useEffect(() => {
     const script = document.createElement('script');
-    script.src = '/particles.min.js';
+    script.src = particlesScript;
     script.onload = () => {
       if (window.particlesJS) {
-        window.particlesJS.load('particles-js', '/particles.json', () => {
+        window.particlesJS.load('particles-js', particlesConfig, () => {
           console.log('particles.js loaded - callback');
           const canvas = document.querySelector('#particles-js canvas') as HTMLCanvasElement;
           if (canvas) {
