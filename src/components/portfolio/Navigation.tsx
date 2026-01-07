@@ -176,7 +176,7 @@ const Navigation = () => {
                   transition={{ delay: 0.6 }}
                 >
                   <a
-                    href="/resume.pdf"
+                    href="/pdfs/Resume_NAM.pdf"
                     download
                     className="inline-flex items-center gap-2 px-4 py-3 bg-primary text-primary-foreground font-medium rounded-lg hover:bg-primary/90 transition-colors w-full justify-center"
                     onClick={() => setIsMobileMenuOpen(false)}
