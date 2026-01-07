@@ -59,7 +59,8 @@
 
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 4rem; 
+    scroll-padding-top: 4rem;
+    scroll-snap-type: y proximity;
   }
 
   body {
@@ -72,8 +73,23 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  * {
-    scroll-behavior: inherit;
+  section {
+    scroll-snap-align: start;
+    scroll-margin-top: 4rem;
+  }
+  
+  section:has(> .container-narrow > div > .space-y-12) {
+    scroll-snap-align: none;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    * {
+      scroll-behavior: inherit;
+    }
   }
 
   [data-scroll-reveal] {

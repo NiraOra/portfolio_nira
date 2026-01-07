@@ -55,11 +55,24 @@ const Projects = () => {
           variants={staggerVariants}
           className="space-y-12"
         >
-          <motion.div variants={itemVariants} className="space-y-4">
-            <p className="text-small uppercase tracking-widest">Work</p>
-            <h2 className="heading-section">Featured Projects</h2>
-            <div className="divider" />
-          </motion.div>
+          <div className="bg-background rounded-xl p-8 shadow-card border border-border">
+            <motion.div variants={itemVariants} className="space-y-4">
+              <p className="text-small uppercase tracking-widest">Work</p>
+              <div className="flex items-center justify-between">
+                <h2 className="heading-section">Featured Projects</h2>
+                <a
+                  href="https://github.com/NiraOra"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                >
+                  <Github className="w-4 h-4" />
+                  GitHub
+                </a>
+              </div>
+              <div className="divider" />
+            </motion.div>
+          </div>
 
           <motion.div variants={itemVariants} className="grid md:grid-cols-2 gap-6">
             {projects.map((project, index) => (
@@ -96,21 +109,6 @@ const Projects = () => {
                 </div>
               </motion.article>
             ))}
-          </motion.div>
-
-          <motion.div
-            variants={itemVariants}
-            className="text-center pt-4"
-          >
-            <a
-              href="https://github.com/NiraOra"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors link-underline"
-            >
-              <Github className="w-4 h-4" />
-              View more on GitHub
-            </a>
           </motion.div>
         </motion.div>
       </div>
