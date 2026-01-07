@@ -50,7 +50,7 @@ const Publications = () => {
 
   return (
     <section id="publications" className="section-padding" ref={ref}>
-      <div className="container-narrow">
+      <div className="container-narrow bg-background rounded-xl p-8 shadow-card border border-border">
         <motion.div
           initial="hidden"
           animate={controls}
@@ -74,7 +74,7 @@ const Publications = () => {
                 variants={itemVariants}
                 className={`card-elegant group ${
                   pub.status === "Accepted" 
-                    ? "bg-primary/5 border border-primary/20 ring-1 ring-primary/10" 
+                    ? "bg-background border border-primary/20 ring-1 ring-primary/10" 
                     : ""
                 }`}
               >
