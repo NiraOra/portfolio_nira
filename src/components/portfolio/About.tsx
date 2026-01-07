@@ -89,17 +89,33 @@ const About = () => {
             variants={itemVariants}
             className="pt-8 border-t border-border"
           >
-            <h3 className="font-serif text-lg font-medium mb-4">Technical Skills Gained</h3>
-            <div className="flex flex-wrap gap-2">
-              {[
-                "Python", "TensorFlow", "R", "SQL", "Java", "TypeScript", 
-                "JavaScript", "Machine Learning", "NLP", "Azure", "GitHub",
-                "AWS", "Rust"
-              ].map((skill) => (
-                <span key={skill} className="tag">
-                  {skill}
-                </span>
-              ))}
+            <h3 className="font-serif text-lg font-medium mb-6">Technical Skills</h3>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="space-y-4">
+                <h4 className="font-medium text-sm uppercase tracking-wide text-muted-foreground">Programming Languages</h4>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    "Python", "TypeScript", "JavaScript", "R", "Java", "SQL", "Rust"
+                  ].map((skill) => (
+                    <span key={skill} className="tag">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              
+              <div className="space-y-4">
+                <h4 className="font-medium text-sm uppercase tracking-wide text-muted-foreground">Technologies & Tools</h4>
+                <div className="flex flex-wrap gap-2">
+                  {[
+                    "Machine Learning", "NLP", "TensorFlow", "React", "Azure", "AWS", "GitHub"
+                  ].map((skill) => (
+                    <span key={skill} className="tag">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
           </motion.div>
         </motion.div>
