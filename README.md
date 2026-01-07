@@ -1,7 +1,5 @@
 # Nira's portfolio
 
-WIP DO NOT ENGAGE
+Developed with React (Typescript) and Tailwind CSS!!
 
-Devved with React (Typescript) and Tailwind CSS!!
-
-(Background inspo from https://vincentgarreau.com/particles.js/)
+> ***Note***: Particles mesh background from https://vincentgarreau.com/particles.js/
