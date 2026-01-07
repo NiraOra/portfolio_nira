@@ -99,7 +99,7 @@ const Navigation = () => {
               ))}
               <li>
                 <a
-                  href="/resume.pdf"
+                  href="/pdfs/Resume_NAM.pdf"
                   download
                   className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground text-sm font-medium rounded-lg hover:bg-primary/90 transition-colors"
                 >

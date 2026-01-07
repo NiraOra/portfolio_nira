@@ -64,6 +64,7 @@ const Publications = () => {
             <p className="text-body text-muted-foreground max-w-xl">
               Research conducted using the Human Phenotype Project (HPP) under the supervision of 
               Professor Imran Razzak, focusing on AI applications in healthcare and genomics.
+              (Note: only preprints available currently)
             </p>
           </motion.div>
 
