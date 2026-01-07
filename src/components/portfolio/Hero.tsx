@@ -5,12 +5,13 @@ const Hero = () => {
   return (
     <section className="min-h-screen flex flex-col justify-center relative">
       <div className="container-narrow">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="flex flex-col lg:flex-row lg:items-center lg:gap-12 space-y-8 lg:space-y-0"
-        >
+        <div className="bg-background rounded-xl p-12 shadow-card border border-border">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="flex flex-col lg:flex-row lg:items-center lg:gap-12 space-y-8 lg:space-y-0"
+          >
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -80,6 +81,7 @@ const Hero = () => {
           </motion.div>
           </div>
         </motion.div>
+        </div>
       </div>
 
       <motion.div
