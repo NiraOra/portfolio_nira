@@ -58,9 +58,6 @@ const Contact = () => {
                   <p className="text-xs text-muted-foreground uppercase tracking-wider">
                     {link.label}
                   </p>
-                  <p className="font-medium group-hover:text-primary transition-colors">
-                    {link.value}
-                  </p>
                 </div>
               </motion.a>
             ))}

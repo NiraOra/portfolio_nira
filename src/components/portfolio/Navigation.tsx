@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Download } from "lucide-react";
+import { SearchBar } from "../SearchBar";
 
 const navItems = [
   { label: "About", href: "#about" },
@@ -77,12 +78,16 @@ const Navigation = () => {
         }`}
       >
         <div className="container-narrow">
-          <div className="flex items-center justify-between h-16 md:h-20">
-            <a href="#" className="font-serif text-xl font-medium">
+          <div className="flex items-center justify-between h-16 md:h-20 gap-4">
+            <a href="#" className="font-serif text-xl font-medium flex-shrink-0">
               NAM<span className="text-primary"></span>
             </a>
 
-            <ul className="hidden md:flex items-center gap-8">
+            <div className="hidden md:flex items-center gap-6 flex-1 justify-center">
+              <SearchBar />
+            </div>
+
+            <ul className="hidden md:flex items-center gap-8 flex-shrink-0">
               {navItems.map((item) => (
                 <li key={item.label}>
                   <a
