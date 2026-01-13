@@ -14,8 +14,9 @@ const publications = [
   {
     title: "Few-Label Multimodal Modeling of SNP Variants and ECG Phenotypes Using Large Language Models for Cardiovascular Risk Stratification",
     authors: "Niranjana Arun Menon, Iqra Farooq, Yulong Li, Sara Ahmed, Muhammad Awais, Imran Razzak",
-    venue: "ARR 2025-NAACL",
-    status: "Submitted",
+    venue: "BIOSTEC 2026",
+    status: "Accepted",
+    award: "Shortlisted for 'Best Student Paper Award'",
     preprint: "https://arxiv.org/abs/2510.16536",
     tags: ["Cardiovascular Diseases", "LLMs", "Single Nucleotide Polymorphism", "Time-Series Analysis"],
   },
@@ -96,11 +97,27 @@ const Publications = () => {
                       }`}>
                         • {pub.status}
                       </span>
+                      {pub.award && (
+                        <span className="text-xs font-medium text-emerald-600 uppercase tracking-wider">
+                          • {pub.award}
+                        </span>
+                      )}
                     </div>
                     
-                    <h3 className="font-serif text-lg md:text-xl font-medium leading-snug group-hover:text-primary transition-colors">
-                      {pub.title}
-                    </h3>
+                    {pub.preprint ? (
+                      <a
+                        href={pub.preprint}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-serif text-lg md:text-xl font-medium leading-snug group-hover:text-primary transition-colors cursor-pointer block hover:underline"
+                      >
+                        {pub.title}
+                      </a>
+                    ) : (
+                      <h3 className="font-serif text-lg md:text-xl font-medium leading-snug group-hover:text-primary transition-colors">
+                        {pub.title}
+                      </h3>
+                    )}
                     
                     <p className="text-small">
                       {pub.authors}
