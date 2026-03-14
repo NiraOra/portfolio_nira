@@ -5,7 +5,7 @@ const experiences = [
   {
     title: "Graduate AI Engineer - DDAI Specialist Program",
     company: "Westpac Group",
-    period: "Starting 2026",
+    period: "February 2026 - Current",
     description: [
       "Accepted into the Westpac Data & AI Graduate Program (NSW), completing rotations across data science, analytics, and AI-driven engineering teams while applying machine learning to large-scale financial systems.",
       "Contributing to the development of agentic AI workflows for software lifecycle automation, enabling LLM-driven generation of problem statements, user stories, test cases, analytics tracking, and automated reporting.",
