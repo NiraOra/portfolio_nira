@@ -10,8 +10,6 @@ lerna-debug.log*
 
 .venv/
 
-*.json
-
 # Build outputs
 dist/
 dist-ssr/
