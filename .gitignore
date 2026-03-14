@@ -8,6 +8,10 @@ lerna-debug.log*
 
 .DS_Store
 
+.venv/
+
+*.json
+
 # Build outputs
 dist/
 dist-ssr/

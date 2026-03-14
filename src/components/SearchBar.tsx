@@ -2,9 +2,10 @@ import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, X } from 'lucide-react';
 import { useSearch } from '../hooks/useSearch';
+import queryEmbeddings from '../embeddings/embeddings.json';
 
 export const SearchBar = () => {
-  const { search, results, isLoading, isInitialized } = useSearch();
+  const { search, results, isLoading } = useSearch();
   const [query, setQuery] = useState('');
   const [isOpen, setIsOpen] = useState(false);
   const searchRef = useRef<HTMLDivElement>(null);
@@ -23,7 +24,9 @@ export const SearchBar = () => {
   const handleSearch = (value: string) => {
     setQuery(value);
     if (value.trim()) {
-      search(value);
+      const embeddingsMap = queryEmbeddings as Record<string, number[]>;
+      const embedding = embeddingsMap[value] || embeddingsMap[value.toLowerCase()] || [];
+      search(value, embedding);
       setIsOpen(true);
     } else {
       setIsOpen(false);
@@ -43,10 +46,6 @@ export const SearchBar = () => {
     setQuery('');
     setIsOpen(false);
   };
-
-  if (!isInitialized) {
-    return null; 
-  }
 
   return (
     <div ref={searchRef} className="relative w-full md:w-80">

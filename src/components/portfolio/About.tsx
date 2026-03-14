@@ -12,7 +12,7 @@ const About = () => {
   const [isThesisViewerOpen, setIsThesisViewerOpen] = useState(false);
 
   return (
-    <section id="about" className="section-padding bg-card" ref={ref}>
+    <section id="about-section" className="section-padding bg-card" ref={ref}>
       <div className="container-narrow">
         <motion.div
           initial="hidden"

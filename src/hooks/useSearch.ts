@@ -1,32 +1,17 @@
-import { useState, useEffect } from 'react';
+
+import { useState } from 'react';
 import { searchEngine } from '../lib/engineSearch';
 import { type SearchResult } from '../lib/searchTypes';
 
 export const useSearch = () => {
   const [results, setResults] = useState<SearchResult[]>([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [isInitialized, setIsInitialized] = useState(false);
-  
-  useEffect(() => {
-    const initEngine = async () => {
-      try {
-        await searchEngine.initialize();
-        setIsInitialized(true);
-      } catch (error) {
-        console.error('Failed to initialize search engine:', error);
-      }
-    };
-    
-    initEngine();
-  }, []);
-  
-  const search = async (query: string) => {
-    if (!isInitialized) return;
-    
+
+  const search = async (query: string, queryEmbedding: number[]) => {
     setIsLoading(true);
     try {
-      const results = await searchEngine.search(query);
-      setResults(results);
+      const res = await searchEngine.search(query, queryEmbedding);
+      setResults(res);
     } catch (error) {
       console.error('Search failed:', error);
       setResults([]);
@@ -34,6 +19,6 @@ export const useSearch = () => {
       setIsLoading(false);
     }
   };
-  
-  return { search, results, isLoading, isInitialized };
+
+  return { search, results, isLoading };
 };

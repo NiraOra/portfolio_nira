@@ -27,7 +27,7 @@ const ThesisViewer: React.FC<ThesisViewerProps> = ({ pdfUrl, isOpen, onClose }) 
 
   const handleChapterClick = (page: number) => {
     setCurrentPage(page);
-    setShowToc(false); // Close TOC on mobile after selection
+    setShowToc(false); 
     const pdfFrame = document.getElementById('thesis-pdf') as HTMLIFrameElement;
     if (pdfFrame) {
       pdfFrame.src = `${pdfUrl}#page=${page}`;
