@@ -2,14 +2,14 @@ import { motion } from "framer-motion";
 import { useScrollReveal } from "../../hooks/use-scroll-reveal";
 import { FileText, Eye } from "lucide-react";
 import { useState } from "react";
-import ThesisViewer from "./ThesisViewer";
+// ThesisViewer removed
 
 const About = () => {
   const { ref, controls, staggerVariants, itemVariants } = useScrollReveal({
     margin: "-80px"
   });
   
-  const [isThesisViewerOpen, setIsThesisViewerOpen] = useState(false);
+  // ThesisViewer state removed
 
   return (
     <section id="about-section" className="section-padding bg-card" ref={ref}>
@@ -42,27 +42,26 @@ const About = () => {
                 networks, and Chain of Thought learning.
               </p>
               <div className="pt-3 flex flex-col gap-2">
-                <div className="flex gap-3">
-                  <a
-                    href="/pdfs/Niranjana_Arun_Menon_Thesis.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
-                  >
-                    <FileText className="w-4 h-4" />
-                    View Thesis (PDF)
-                  </a>
-                  <button
-                    onClick={() => setIsThesisViewerOpen(true)}
-                    className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    <Eye className="w-4 h-4" />
-                    Interactive Viewer
-                  </button>
+                <div className="mt-4 p-6 bg-gradient-to-br from-secondary via-background to-card rounded-xl shadow-lg border border-border">
+                  <div className="flex items-center gap-3 mb-3">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M4 4v15"/><path d="M8 4v15"/><path d="M16 4v15"/><path d="M20 4v15"/></svg>
+                    <h3 className="font-serif text-2xl font-bold text-primary">Thesis Summary</h3>
+                  </div>
+                  <div className="space-y-2">
+                    <p className="text-lg font-semibold text-muted-foreground">Few Labels Classification in Text - Exploring Machine Learning Models for Cardiogenomic Diagnosis</p>
+                    <p className="italic text-sm text-muted-foreground mb-2">Supervisor: Dr. Imran Razzak</p>
+                    <ul className="list-disc pl-6 text-base text-body mb-2">
+                      <li>Advanced machine learning & NLP for cardiogenomic disease diagnosis</li>
+                      <li>Focus on few-label classification problems</li>
+                      <li>Leveraged knowledge graphs, traditional ML, LLMs, and chain-of-thought learning</li>
+                      <li>Improved diagnostic accuracy in biomedical contexts with limited labeled data</li>
+                      <li>Bridging AI and healthcare with novel research contributions</li>
+                    </ul>
+                  </div>
+                  <div className="mt-2 text-xs text-muted-foreground">
+                    This thesis was submitted as part of the Honours degree requirements and attained a High Distinction.
+                  </div>
                 </div>
-                <p className="text-xs text-muted-foreground">
-                  This thesis was submitted as part of the Honours degree requirements. 
-                </p>
               </div>
               <p className="text-sm">
                 <span className="font-medium">WAM:</span> 81.500 (overall)
@@ -121,11 +120,7 @@ const About = () => {
         </motion.div>
       </div>
       
-      <ThesisViewer
-        pdfUrl="/pdfs/Niranjana_Arun_Menon_Thesis.pdf"
-        isOpen={isThesisViewerOpen}
-        onClose={() => setIsThesisViewerOpen(false)}
-      />
+      {/* ThesisViewer removed */}
     </section>
   );
 };
