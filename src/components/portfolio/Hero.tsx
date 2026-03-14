@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
-import profilePhoto from "../../assets/profile.jpg";
+import profilePhoto from "../../assets/profilep2.jpeg";
 
 const Hero = () => {
   return (

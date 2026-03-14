@@ -3,14 +3,15 @@ import { useScrollReveal } from "../../hooks/use-scroll-reveal";
 
 const experiences = [
   {
-    title: "Data and AI Graduate (Incoming)",
+    title: "Graduate AI Engineer - DDAI Specialist Program",
     company: "Westpac Group",
     period: "Starting 2026",
     description: [
-      "Accepted into the Westpac Data & AI Graduate Program (NSW)",
-      "Program includes rotations across data science, analytics, and AI-driven teams",
-      "Applying machine learning to large-scale, real-world financial systems"],
-    tags: ["Graduate Program", "Data & AI"],
+      "Accepted into the Westpac Data & AI Graduate Program (NSW), completing rotations across data science, analytics, and AI-driven engineering teams while applying machine learning to large-scale financial systems.",
+      "Contributing to the development of agentic AI workflows for software lifecycle automation, enabling LLM-driven generation of problem statements, user stories, test cases, analytics tracking, and automated reporting.",
+      "Designing a semantic similarity and recommendation system for identifying redundant user stories using text embeddings and vector similarity methods, supporting more efficient requirements management and product development."],
+    tags: ["Machine Learning", "Natural Language Processing", "Large Language Models", "Agentic AI", "Semantic Similarity"
+]
   },
   {
     title: "Research Assistant",

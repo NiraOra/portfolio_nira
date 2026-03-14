@@ -14,26 +14,26 @@ const publications = [
   {
     title: "Few-Label Multimodal Modeling of SNP Variants and ECG Phenotypes Using Large Language Models for Cardiovascular Risk Stratification",
     authors: "Niranjana Arun Menon, Iqra Farooq, Yulong Li, Sara Ahmed, Muhammad Awais, Imran Razzak",
-    venue: "BIOSTEC 2026",
+    venue: "BIOSTEC 2026, ISMB 2026",
     status: "Accepted",
-    award: "Shortlisted for 'Best Student Paper Award'",
+    award: "Shortlisted for 'Best Student Paper Award' for BIOSTEC 2026",
     preprint: "https://arxiv.org/abs/2510.16536",
     tags: ["Cardiovascular Diseases", "LLMs", "Single Nucleotide Polymorphism", "Time-Series Analysis"],
+  },
+  {
+    title: "Exploring the Influence of Lifestyle, Social Health, and Demographic Factors on Psychological Well-being and Engagement Levels",
+    authors: "Md. Rafiqul Islam, Niranjana Arun Menon, Mohamed Reda Bouadjenek, Eran Segal, Imran Razzak",
+    venue: "WWW 2026 - Companion Paper (MM4SG)",
+    status: "Accepted",
+    preprint: "https://doi.org/10.64898/2026.02.09.26345884",
+    tags: ["Loneliness", "Psychological Well-Being", "Social Health", "Lifestyle Factors", "Depression"],
   },
   {
     title: "Genesis5K: Hierarchical and Causal Diagnostics for Long-Video Understanding",
     authors: "Yulong Li, Yuxuan Zhang, Man Lei, yibo.yuan, Yichen Li, Xiwei Liu, Xinlin Zhuang, Haolin Yang, Yifan Lu, Niranjana Arun Menon, Chong Li, Yutong Xie, Jionglong Su, Imran Razzak",
     venue: "ARR ACL 2026",
     status: "Submitted",
-    preprint: "https://openreview.net/pdf?id=ANNxHszSJG",
     tags: ["Long-form Video Understanding", "Multimodal Large Language Models", "Causal Reasoning", "Hierarchical Cognitive Taxonomy","Diagnostic Evaluation","Embodied AI"]
-  },
-  {
-    title: "Exploring the Influence of Lifestyle, Social Health, and Demographic Factors on Psychological Well-being and Engagement Levels",
-    authors: "Md. Rafiqul Islam, Niranjana Arun Menon, Mohamed Reda Bouadjenek, Eran Segal, Imran Razzak",
-    venue: "WWW 2026",
-    status: "Submitted",
-    tags: ["Loneliness", "Psychological Well-Being", "Social Health", "Lifestyle Factors", "Depression"],
   },
   {
     title: "Decoding Causal Structure: End-to-End Mediation",
