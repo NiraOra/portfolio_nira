@@ -28,18 +28,20 @@ const publications = [
 		preprint: "https://doi.org/10.64898/2026.02.09.26345884",
 		tags: ["Loneliness", "Psychological Well-Being", "Social Health", "Lifestyle Factors", "Depression"],
 	},
-	// {
-	// 	title: "Genesis5K: Hierarchical and Causal Diagnostics for Long-Video Understanding",
-	// 	authors: "Yulong Li, Yuxuan Zhang, Man Lei, yibo.yuan, Yichen Li, Xiwei Liu, Xinlin Zhuang, Haolin Yang, Yifan Lu, Niranjana Arun Menon, Chong Li, Yutong Xie, Jionglong Su, Imran Razzak",
-	// 	venue: "ARR ACL 2026",
-	// 	status: "Submitted",
-	// 	tags: ["Long-form Video Understanding", "Multimodal Large Language Models", "Causal Reasoning", "Hierarchical Cognitive Taxonomy", "Diagnostic Evaluation", "Embodied AI"],
-	// },
+	{
+		title: "Decoding Multimodal Causality: End-to-End Multimodal Mediation Pathways Inference",
+		authors: "Yulong Li, Xiwei Liu, Niranjana Arun Menon, Yuxuan Zhang, Jianxu Chen, Rong Xia, Haolin Yang, Peixin Guo, Yutong Xie, Imran Razzak",
+		venue: "ECCV 2026",
+		status: "Accepted",
+		preprint: "https://eccv.ecva.net/virtual/2026/poster/3479",
+		tags: ["Multimodal Causal Mediation Analysis", "Causal Structure Discovery", "Multimodal Representation Learning", "Mediation Pathway Identification", "Uncertainty Quantification", "Bayesian Model Averaging"],
+	},
 	{
 		title: "DoAtlas-1: A Causal Compilation Paradigm for Clinical AI",
 		authors: "Yulong Li, Jianxu Chen, Xiwei Liu, Chuanyue Suo, Rong Xia, Yichen Li, Xinlin Zhuang, Niranjana Arun Menon, Jionglong Su, Eran Segal, Imran Razzak",
 		venue: "NeurIPS 2026",
 		status: "Accepted",
+		preprint: "https://arxiv.org/abs/2602.19158",
 		tags: ["Causal Inference", "Mediation Analysis"],
 	},
 ];
