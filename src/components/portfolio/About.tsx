@@ -30,6 +30,23 @@ const About = () => {
             <div className="space-y-6">
               <div className="space-y-2">
                 <h3 className="font-serif text-xl font-bold">
+                  Masters of Artificial Intelligence and Machine Learning
+                </h3>
+                <p className="text-sm text-primary">Technische Universität Darmstadt</p>
+                <p className="text-small">October 2026 - Current</p>
+              </div>
+              <p className="text-body text-muted-foreground">
+                Currently pursuing a research masters at TU Darmstadt, Germany.
+              </p>
+              {/* <p className="text-sm">
+                <span className="font-medium">WAM:</span> 81.500 (overall)
+              </p> */}
+            </div>
+            
+            
+            <div className="space-y-6">
+              <div className="space-y-2">
+                <h3 className="font-serif text-xl font-bold">
                   Bachelor of Computer Science (Honours)
                 </h3>
                 <p className="text-sm text-primary">UNSW Sydney • QS Rank #19</p>
